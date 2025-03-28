@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilmCritic - Críticas de Películas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="logo">FilmCritic</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar películas...">
+      <button>🔍</button>
+    </div>
+    <button class="login-btn">Iniciar sesión</button>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="movie-section">
+      <h2>Películas en tendencia</h2>
+      <div class="movie-carousel" id="trending">
+        <!-- Películas se cargarán con JavaScript -->
+      </div>
+    </section>
+
+    <section class="movie-section">
+      <h2>Mejor valoradas</h2>
+      <div class="movie-carousel" id="top-rated">
+        <!-- Películas se cargarán con JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de inicio de sesión (oculto por defecto) -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Iniciar sesión</h2>
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
