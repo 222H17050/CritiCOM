@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilmCritic - Detalle de Película</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de navegación (igual que en index.html) -->
+  <nav class="navbar">
+    <div class="logo">FilmCritic</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar películas...">
+      <button>🔍</button>
+    </div>
+    <button class="login-btn">Iniciar sesión</button>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="movie-detail">
+    <!-- Portada y título -->
+    <section class="movie-header">
+      <img id="movie-cover" src="" alt="Portada" class="cover">
+      <div class="movie-title">
+        <h1 id="movie-title">Título de la Película</h1>
+        <div class="rating" id="movie-rating">⭐ 0.0/5</div>
+      </div>
+    </section>
+
+    <!-- Metadatos -->
+    <section class="movie-meta">
+      <div class="meta-group">
+        <h3>Sinopsis</h3>
+        <p id="movie-synopsis">Cargando sinopsis...</p>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta-group">
+          <h3>Género</h3>
+          <p id="movie-genre">Ciencia ficción, Drama</p>
+        </div>
+        <div class="meta-group">
+          <h3>Duración</h3>
+          <p id="movie-duration">156 min</p>
+        </div>
+        <div class="meta-group">
+          <h3>Director</h3>
+          <p id="movie-director">Christopher Nolan</p>
+        </div>
+        <div class="meta-group">
+          <h3>Soundtrack</h3>
+          <p id="movie-soundtrack">Hans Zimmer</p>
+        </div>
+      </div>
+
+      <!-- Espacio para carrusel de actores (librería externa) -->
+      <div class="meta-group">
+        <h3>Reparto principal</h3>
+        <div class="actors-carousel">
+          <!-- LIBRERÍA EXTERNA: Carrusel de actores (ej: Swiper.js) -->
+          <p style="background: #333; padding: 1rem; border-radius: 4px;">
+            [Aquí iría un carrusel interactivo de actores]
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valoración (solo para usuarios logueados) -->
+    <section class="rating-section" id="rating-section">
+      <h2>¿Ya la viste? ¡Califícala!</h2>
+      <div class="stars">
+        <!-- LIBRERÍA EXTERNA: Widget de estrellas (ej: RateYo.js) -->
+        <p style="background: #333; padding: 1rem; border-radius: 4px;">
+          [Aquí iría un widget de 5 estrellas interactivo]
+        </p>
+      </div>
+      <button class="submit-rating" disabled>Enviar calificación</button>
+    </section>
+
+    <!-- Comentarios -->
+    <section class="comments-section">
+      <h2>Comentarios</h2>
+      <div class="comments-list" id="comments-list">
+        <!-- Comentarios se cargarán con JavaScript -->
+      </div>
+
+      <!-- Formulario de comentario (solo visible si hay sesión) -->
+      <div class="comment-form" id="comment-form">
+        <h3>Deja tu comentario</h3>
+        <textarea placeholder="Escribe tu opinión..."></textarea>
+        <button class="submit-comment">Publicar</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de login (igual que en index.html) -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Iniciar sesión</h2>
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
